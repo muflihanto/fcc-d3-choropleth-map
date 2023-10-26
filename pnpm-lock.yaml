@@ -5,12 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@unocss/reset':
+    specifier: ^0.57.1
+    version: 0.57.1
   d3:
     specifier: ^7.8.5
     version: 7.8.5
   preact:
     specifier: ^10.16.0
     version: 10.18.1
+  topojson-client:
+    specifier: ^3.1.0
+    version: 3.1.0
 
 devDependencies:
   '@preact/preset-vite':
@@ -19,6 +25,9 @@ devDependencies:
   '@types/d3':
     specifier: ^7.4.2
     version: 7.4.2
+  '@types/topojson-client':
+    specifier: ^3.1.3
+    version: 3.1.3
   '@unocss/preset-uno':
     specifier: ^0.57.1
     version: 0.57.1
@@ -823,6 +832,19 @@ packages:
     resolution: {integrity: sha512-uK2z1ZHJyC0nQRbuovXFt4mzXDwf27vQeUWNhfKGwRcWW429GOhP8HxUHlM6TLH4bzmlv/HlEjpvJh3JfmGsAA==}
     dev: true
 
+  /@types/topojson-client@3.1.3:
+    resolution: {integrity: sha512-liC+dHCxoqQy5bbJMsF59Cx1WZZwbcT084v/5bdp3NWSFUuzQpsm4gbLQh+wlv58Mng4jCsO4p8hWelqGlb7rg==}
+    dependencies:
+      '@types/geojson': 7946.0.12
+      '@types/topojson-specification': 1.0.4
+    dev: true
+
+  /@types/topojson-specification@1.0.4:
+    resolution: {integrity: sha512-LG/a8kJi4X6MsFhZKiBAIC/a+yCFtjkHsDMwuQqSoB1az8D2bR2xRKU3aczizfcqdt2lVqnS+aJBFMrO+rO5Aw==}
+    dependencies:
+      '@types/geojson': 7946.0.12
+    dev: true
+
   /@unocss/astro@0.57.1(vite@4.5.0):
     resolution: {integrity: sha512-KNaqN/SGM/uz1QitajIkzNEw0jy9Zx9Wp8fl4GhfGYEMAN2+M4cuvBZRmlb6cLctSXmSAJQDG91ivbD1JijGnw==}
     peerDependencies:
@@ -965,7 +987,6 @@ packages:
 
   /@unocss/reset@0.57.1:
     resolution: {integrity: sha512-f/ofoudjFN/HMtv1XV5phP58pOmNruBhr0GbVdBNylyieMQkFHowA7iSemChnC/fTbCcY6oSOAcFl4n9AefjdA==}
-    dev: true
 
   /@unocss/rule-utils@0.57.1:
     resolution: {integrity: sha512-Hdicz7YORZx7SHICldzOGjPNeJwk/Xhy3cycqiPbg6nB6d639bpgZn5BsbDzHCPKpguwDomUqTZS6+C3s7tUVg==}
@@ -1129,6 +1150,10 @@ packages:
   /colorette@2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
     dev: true
+
+  /commander@2.20.3:
+    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+    dev: false
 
   /commander@7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
@@ -1961,6 +1986,13 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
+
+  /topojson-client@3.1.0:
+    resolution: {integrity: sha512-605uxS6bcYxGXw9qi62XyrV6Q3xwbndjachmNxu8HWTtVPxZfEJN9fd/SZS1Q54Sn2y0TMyMxFj/cJINqGHrKw==}
+    hasBin: true
+    dependencies:
+      commander: 2.20.3
+    dev: false
 
   /totalist@3.0.1:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
