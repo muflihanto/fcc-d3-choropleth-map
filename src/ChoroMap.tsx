@@ -106,6 +106,11 @@ export default function ChoroMap({ width = 960, height = 600 }: ChoroParams) {
               })}
           </g>
         </g>
+        <path
+          class="fill-none stroke-white stroke-join-round"
+          // @ts-expect-error: counties types inferred as string
+          d={path(topojson.mesh(counties, counties.objects.states, (a, b) => a !== b))}
+        />
       </svg>
     </div>
   );
